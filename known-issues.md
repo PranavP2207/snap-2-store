@@ -71,9 +71,10 @@ No confirmed blocking defects remain in the verified offline workflow. External-
 - Evidence: redeployment reached READY; online sample ingestion, mask isolation, four variants, editable result and approved demo receipt passed. Private media returns 200 only for its owning browser workspace.
 
 ### I-011: Original repository could not be linked for automatic deployments
-- Status: resolved configuration, 2026-10-17; automatic build verification follows the new-repository push.
+- Status: resolved and verified, 2026-10-17.
 - Original impact: Vercel CLI could not link `Gautamx025/project2.0` because its GitHub login connection was missing. CLI source uploads built/deployed successfully.
 - Resolution: the user selected `PranavP2207/project2.0` as the new canonical repository and linked it to Vercel. Project metadata independently confirms that exact repository and production branch `main`; local `origin` was updated accordingly.
+- Evidence: push `4053995` automatically created production deployment `dpl_FSXJRwhCGSryoTL3YG5qtvhrVDyX`, which reached READY. The public `snap-2-store.vercel.app` alias points to that deployment.
 - Fallback: use `vercel deploy --prod` from the linked checkout if a Git-triggered build needs diagnosis.
 
 - Real cloud/model/search/store credentials were not supplied. HTTP contracts have tests and official source references, but account access, latency and quality need authenticated smoke tests.

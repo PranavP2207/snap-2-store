@@ -8,7 +8,7 @@ A phone photo becomes a reviewable product draft: four image settings, editable 
 
 Live demo: **https://snap-2-store.vercel.app**. Uploads, all six processing stages, private media/history, saved edits and an approved demo draft have been verified on the hosted services. Live AI and store credentials are not configured.
 
-Canonical source: [PranavP2207/project2.0](https://github.com/PranavP2207/project2.0). Vercel is linked to this repository's `main` production branch.
+Canonical source: [PranavP2207/project2.0](https://github.com/PranavP2207/project2.0). Vercel is linked to this repository's `main` production branch. A push to `main` automatically built and deployed successfully; the public URL above points to that GitHub-triggered deployment.
 
 The deployment configuration runs Next.js and FastAPI together using Vercel Services. `vercel.json` routes `/api/*` and `/media/*` to Python and all other paths to Next.js. `server.py` selects the pinned, lean Python runtime in root `requirements.txt`; the full local environment retains CPU rembg in `backend/requirements.lock.txt`. Sample photos and their masks are explicitly included in the Python function.
 
