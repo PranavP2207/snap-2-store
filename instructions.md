@@ -10,6 +10,8 @@ Latest delivery instruction: use `https://github.com/PranavP2207/project2.0` as 
 
 Additional delivery instruction: the user requests a new repository on their profile named after the app and asks to push the app there as well. The additional destination is `PranavP2207/snap-2-store`; it is private. Retaining the existing `origin` and Vercel connection is an implementation choice for this additional delivery (D-011).
 
+Latest documentation instruction: add screenshots to the README and make it community-friendly. Include selected demo captures as versioned documentation assets, explain setup and contributions clearly, preserve accurate demo/verification boundaries, and avoid implying an unselected license or unconfigured CI workflow.
+
 Latest setup instruction: fetch and follow `https://vercel.com/get-started.md` to prepare Vercel for this coding agent. That guide calls for a global CLI, user-scoped Vercel plugin guidance and the shared OAuth MCP endpoint `https://mcp.vercel.com`. It explicitly defers project creation/linking until a project-specific operation requires it. Preserve confirmation for MCP mutations and keep all account credentials outside the repository.
 
 Latest task: the user now explicitly requests deployment on Vercel. This authorizes the project-specific hosting work deferred during onboarding. Deliver a working online listing flow, retaining labeled demo behavior when live provider credentials are absent, and verify the deployed app before reporting it ready.

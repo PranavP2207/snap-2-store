@@ -8,6 +8,7 @@ data
 !.env.example
 !.env.cloud.example
 docs/screenshots
+docs/images
 docs/visual-qa.md
 BUILD-BRIEF.md
 frontend/AGENTS.md

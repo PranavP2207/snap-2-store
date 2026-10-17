@@ -57,7 +57,7 @@ Checked means the requirement has a concrete implementation and the cited verifi
 - [x] Compose frontend/backend/Redis/worker configuration, persistent volumes and lockfile-based builds — `compose.yaml`, Dockerfiles; `docker compose config --quiet`. Engine/image execution unavailable; manual production path verified.
 - [x] Backend pytest and frontend production build/type checking — `backend/tests`, root npm scripts; final command results in current-state.md.
 - [x] Real two-server Playwright upload → six stages → edit → approved mock-store draft — `core.spec.ts`, isolated demo config/storage.
-- [x] Landing, processing, review and 390px screenshots saved and visually inspected, then refreshed after fixes — local ignored `docs/screenshots` and `docs/visual-qa.md`; browser tests regenerate screenshots.
+- [x] Landing, processing, review and 390px screenshots saved and visually inspected, then refreshed after fixes — local ignored `docs/screenshots` and `docs/visual-qa.md`; browser tests regenerate screenshots. Four curated copies are now versioned in `docs/images/` and linked in the README at the user's request.
 - [x] Exact setup commands, environment/provider guidance, free Shopify dev-store and Woo test-store steps — `README.md`, official links and provider reference.
 - [x] Two-minute judges' script, mocked-vs-real explanation and known limitations — `docs/demo-script.md`, README and known-issues.md.
 

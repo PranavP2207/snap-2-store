@@ -116,3 +116,13 @@ No superseded decisions recorded. Existing technology choices are observed imple
 - Reason: This adds the requested app-named destination while preserving the established deployment source. Private visibility avoids introducing public access without an explicit request.
 - Alternatives: Replacing `origin` or relinking Vercel would turn an additional delivery into a deployment migration. Pushing every local branch would include the intentionally local historical backup.
 - Consequences: Both repositories can receive the same `main` commit through explicit pushes. They do not automatically synchronize. Credentials, generated artifacts and the local backup branch remain excluded.
+
+### D-012: Publish a curated screenshot gallery with community documentation
+
+- Date: 2026-10-17
+- Status: accepted
+- Source: User explicitly requests README screenshots and a community-friendly README.
+- Decision: Include four existing, visually inspected local-demo screenshots in `docs/images/` and link them with expandable previews. Organize the README around onboarding, configuration, verification and contribution guidance; retain detailed store setup and verification limits.
+- Reason: New readers can see the working app and find setup/contribution instructions without confusing demo captures with live provider output.
+- Alternatives: Linking ignored local files would break on GitHub; committing every QA capture would add unrelated screenshots, including account consent pages. Selecting a license or inventing CI status is outside this documentation request.
+- Consequences: This explicitly extends D-007's screenshot exclusion for the four curated README assets only. Raw QA captures remain ignored, and `docs/images` is excluded from Vercel uploads. Both repositories receive the documentation update; application code remains unchanged.
