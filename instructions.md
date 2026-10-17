@@ -6,7 +6,7 @@ Last updated: 2026-10-17
 
 Build the complete working application specified by the user on 2026-10-17 and summarized below. This supersedes the earlier review-only scope. Work autonomously, choose and record sensible defaults, verify each milestone, and commit after each milestone. Do not ask product-clarification questions.
 
-Latest delivery instruction: push the important project files to the original `Gautamx025/project2.0` GitHub repository. The user confirms collaborator access. Include source, runtime assets, tests, lock files, configuration templates and essential project documentation; keep credentials, installed dependencies, build output and generated QA artifacts local.
+Latest delivery instruction: use `https://github.com/PranavP2207/project2.0` as this project's new canonical repository, update the local remote and push the changes there. This supersedes the original `Gautamx025/project2.0` destination; the user also confirms Vercel is linked to the new repository. Include source, runtime assets, tests, lock files, configuration templates and essential project documentation; keep credentials, installed dependencies, build output and generated QA artifacts local.
 
 Latest setup instruction: fetch and follow `https://vercel.com/get-started.md` to prepare Vercel for this coding agent. That guide calls for a global CLI, user-scoped Vercel plugin guidance and the shared OAuth MCP endpoint `https://mcp.vercel.com`. It explicitly defers project creation/linking until a project-specific operation requires it. Preserve confirmation for MCP mutations and keep all account credentials outside the repository.
 

@@ -73,6 +73,6 @@ No paid/authenticated model request or real store write was made. Current provid
 - [x] Large-photo preparation is verified against an enforced transport limit: the original >4.5 MB PNG receives 413, and the same file succeeds through the photo picker and all six stages.
 - [x] Current checks: 33 backend tests, 12 production-frontend browser checks (11 existing + the focused large-photo check), local/remote production build and TypeScript.
 - [x] Live cloud sample processing, private media and stranger rejection, exact edited payload, explicit approved demo draft, idempotency and returning-visitor persistence — `backend/scripts/smoke_cloud.py`.
-- [ ] Automatic GitHub-triggered deployments — optional account login connection is missing; manual CLI production deployment is verified (I-011).
+- [x] Canonical GitHub repository linked in Vercel — project metadata confirms `PranavP2207/project2.0`, production branch `main` (I-011). Automatic build verification follows the delivery push; manual CLI production deployment is verified.
 
 Hosted provider/store behavior remains labeled demo. Cloud records/media are durable, while its local search cache is best-effort. Anonymous browser cookies isolate visitors; production merchant account authentication and store-accessible media remain separate work before enabling live store credentials.

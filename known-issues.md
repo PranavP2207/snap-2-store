@@ -70,11 +70,11 @@ No confirmed blocking defects remain in the verified offline workflow. External-
 - Resolution: explicitly include `frontend/public/samples/**` in the Python function configuration.
 - Evidence: redeployment reached READY; online sample ingestion, mask isolation, four variants, editable result and approved demo receipt passed. Private media returns 200 only for its owning browser workspace.
 
-### I-011: Automatic GitHub deployment linking is not configured
-- Status: open; non-blocking hosting configuration.
-- Impact/evidence: Vercel CLI could not link `Gautamx025/project2.0` because the Vercel account lacks a GitHub login connection. CLI source uploads build/deploy successfully.
-- Workaround: use `vercel deploy --prod` from the linked checkout.
-- Next action: the account owner can add the GitHub login connection/repository access in Vercel, then link the repository if automatic Git-triggered builds are wanted. No connection or repository permissions were changed silently.
+### I-011: Original repository could not be linked for automatic deployments
+- Status: resolved configuration, 2026-10-17; automatic build verification follows the new-repository push.
+- Original impact: Vercel CLI could not link `Gautamx025/project2.0` because its GitHub login connection was missing. CLI source uploads built/deployed successfully.
+- Resolution: the user selected `PranavP2207/project2.0` as the new canonical repository and linked it to Vercel. Project metadata independently confirms that exact repository and production branch `main`; local `origin` was updated accordingly.
+- Fallback: use `vercel deploy --prod` from the linked checkout if a Git-triggered build needs diagnosis.
 
 - Real cloud/model/search/store credentials were not supplied. HTTP contracts have tests and official source references, but account access, latency and quality need authenticated smoke tests.
 - Docker Desktop's Linux engine was unavailable. Compose syntax/configuration passed; no full container build or real Redis broker run was claimed. BackgroundTasks runs end to end; Redis fallback and fast-worker races are tested.

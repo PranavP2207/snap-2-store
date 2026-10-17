@@ -97,3 +97,12 @@ No superseded decisions recorded. Existing technology choices are observed imple
 - Reason: A frontend-only deploy would leave uploads/processing/history broken. Vercel's ephemeral filesystem cannot provide the current persistence contract.
 - Alternatives: Hosting FastAPI on another provider would add an external account dependency; temporary-only files would lose listings across cloud instances.
 - Consequences: Cloud runtime dependencies must fit Vercel's function bundle and 300-second execution limit. The Python Blob SDK cannot provide cache-bypassed mutable reads, so Redis holds mutable records while Blob media uses unique immutable names, including on retries. Verify the deployed workflow, persistence across clients/instances and private media access. Large local rembg model dependencies remain in the local install; cloud missing-key paths retain explicit demo fallbacks. Browser uploads are reduced when needed to keep up to three photos below the platform request limit.
+
+### D-010: Move the canonical GitHub destination to the user's repository
+
+- Date: 2026-10-17
+- Status: accepted
+- Source: User explicitly selects `https://github.com/PranavP2207/project2.0` as the new repository and says Vercel is linked to it.
+- Decision: Update local `origin` to the new repository and push essential deployment changes to `main` using a normal fast-forward. Preserve the original import/delivery history as historical evidence.
+- Reason: The new repository is the user's selected source for continued development and Vercel deployment. Its `main` shares the existing `eaf67df` baseline, so history does not need rewriting.
+- Consequences: Future pushes target `PranavP2207/project2.0`. Vercel project metadata independently confirms this repository and production branch `main`; verify the triggered build after pushing. Generated artifacts and credentials remain excluded under D-007.

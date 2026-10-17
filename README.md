@@ -8,6 +8,8 @@ A phone photo becomes a reviewable product draft: four image settings, editable 
 
 Live demo: **https://snap-2-store.vercel.app**. Uploads, all six processing stages, private media/history, saved edits and an approved demo draft have been verified on the hosted services. Live AI and store credentials are not configured.
 
+Canonical source: [PranavP2207/project2.0](https://github.com/PranavP2207/project2.0). Vercel is linked to this repository's `main` production branch.
+
 The deployment configuration runs Next.js and FastAPI together using Vercel Services. `vercel.json` routes `/api/*` and `/media/*` to Python and all other paths to Next.js. `server.py` selects the pinned, lean Python runtime in root `requirements.txt`; the full local environment retains CPU rembg in `backend/requirements.lock.txt`. Sample photos and their masks are explicitly included in the Python function.
 
 The hosted demo uses a free managed Upstash Redis store for records and distributed locks, plus a private Vercel Blob store for original/processed photos. Browser workspaces are isolated by a signed, secure, HTTP-only cookie. Clearing that cookie or using another browser starts a separate ledger; this is anonymous workspace isolation, not account authentication. Media reads verify workspace ownership before serving an image. Unique image paths on retries avoid stale Blob/CDN reads.
@@ -29,7 +31,7 @@ Verify an already deployed **demo** with:
 .venv\Scripts\python -m backend.scripts.smoke_cloud https://your-app.vercel.app
 ```
 
-This refuses non-demo mode and checks all seven pages, six-stage sample processing, private media/history, saved edits, explicit approved demo drafts, idempotency and a returning visitor. It creates only an isolated sample listing and no live store product. Git-triggered deployments additionally require the Vercel account's GitHub login connection and repository access; CLI deployments work independently of that connection.
+This refuses non-demo mode and checks all seven pages, six-stage sample processing, private media/history, saved edits, explicit approved demo drafts, idempotency and a returning visitor. It creates only an isolated sample listing and no live store product. Vercel project metadata confirms the canonical GitHub repository and production branch above; CLI deployments also remain available independently of the Git integration.
 
 ## Quick start — Windows PowerShell
 
@@ -208,7 +210,7 @@ Browser tests generate screenshots locally in ignored `docs/screenshots/`. Tests
 - Compose configuration, environment-key audit, dependency consistency and whitespace checks passed. Docker engine execution and authenticated cloud/store calls remain unverified.
 - All four required screenshot categories were refreshed and opened for visual QA. The 44-item coverage checklist has no unchecked implementation items and states its external verification boundary explicitly.
 
-The subsequent Vercel checkpoint passed **33 backend tests**, the existing **11 production-frontend browser checks** and a separate new large-photo check. Local/remote production builds and TypeScript passed. The live cloud smoke check passed, and an actual file uploaded through the hosted browser completed all six stages. Automatic GitHub-triggered deployments still need the Vercel account's GitHub login connection; the current production deployment was made through the CLI.
+The subsequent Vercel checkpoint passed **33 backend tests**, the existing **11 production-frontend browser checks** and a separate new large-photo check. Local/remote production builds and TypeScript passed. The live cloud smoke check passed, and an actual file uploaded through the hosted browser completed all six stages. The initial production deployment used the CLI; the project is now linked to the canonical GitHub repository above.
 
 ## Known limitations
 
