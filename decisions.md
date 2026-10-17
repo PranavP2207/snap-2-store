@@ -106,3 +106,13 @@ No superseded decisions recorded. Existing technology choices are observed imple
 - Decision: Update local `origin` to the new repository and push essential deployment changes to `main` using a normal fast-forward. Preserve the original import/delivery history as historical evidence.
 - Reason: The new repository is the user's selected source for continued development and Vercel deployment. Its `main` shares the existing `eaf67df` baseline, so history does not need rewriting.
 - Consequences: Future pushes target `PranavP2207/project2.0`. Vercel project metadata independently confirms this repository and production branch `main`; push `4053995` triggered a successful production build and the public alias moved to it. Generated artifacts and credentials remain excluded under D-007.
+
+### D-011: Add an app-named repository without moving the deployment source
+
+- Date: 2026-10-17
+- Status: accepted
+- Source: User asks to create a new repository on their profile with the app name and push the app there as well. Repository visibility and local remote naming are implementation choices.
+- Decision: Create private `PranavP2207/snap-2-store` and add the `snap-2-store` remote for explicit `main` pushes. Retain `origin` at `PranavP2207/project2.0` and its existing Vercel connection.
+- Reason: This adds the requested app-named destination while preserving the established deployment source. Private visibility avoids introducing public access without an explicit request.
+- Alternatives: Replacing `origin` or relinking Vercel would turn an additional delivery into a deployment migration. Pushing every local branch would include the intentionally local historical backup.
+- Consequences: Both repositories can receive the same `main` commit through explicit pushes. They do not automatically synchronize. Credentials, generated artifacts and the local backup branch remain excluded.

@@ -10,6 +10,8 @@ Live demo: **https://snap-2-store.vercel.app**. Uploads, all six processing stag
 
 Canonical source: [PranavP2207/project2.0](https://github.com/PranavP2207/project2.0). Vercel is linked to this repository's `main` production branch. A push to `main` automatically built and deployed successfully; the public URL above points to that GitHub-triggered deployment.
 
+An additional private repository is available under the app name: [PranavP2207/snap-2-store](https://github.com/PranavP2207/snap-2-store). The local `snap-2-store` remote points there; `origin` and Vercel continue to use `project2.0`. Push explicitly to both remotes when updating both repositories.
+
 The deployment configuration runs Next.js and FastAPI together using Vercel Services. `vercel.json` routes `/api/*` and `/media/*` to Python and all other paths to Next.js. `server.py` selects the pinned, lean Python runtime in root `requirements.txt`; the full local environment retains CPU rembg in `backend/requirements.lock.txt`. Sample photos and their masks are explicitly included in the Python function.
 
 The hosted demo uses a free managed Upstash Redis store for records and distributed locks, plus a private Vercel Blob store for original/processed photos. Browser workspaces are isolated by a signed, secure, HTTP-only cookie. Clearing that cookie or using another browser starts a separate ledger; this is anonymous workspace isolation, not account authentication. Media reads verify workspace ownership before serving an image. Unique image paths on retries avoid stale Blob/CDN reads.
